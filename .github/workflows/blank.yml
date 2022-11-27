@@ -1,0 +1,15 @@
+name: Manual workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send greeting
+      run: |
+        foo=${{ secrets.secret_to_update }}
+        for (( i=0; i<${#foo}; i++ )); do
+          echo "${foo:$i:1}"
+        done

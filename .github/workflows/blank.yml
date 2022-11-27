@@ -5,6 +5,7 @@ on:
 
 jobs:
   greet:
+    environment: dev
     runs-on: ubuntu-latest
     steps:
     - name: Send greeting
